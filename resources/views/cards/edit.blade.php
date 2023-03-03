@@ -1,13 +1,12 @@
-
 @extends('layouts.main')
 
-@section('title', 'Aggiungi')
+@section('title', 'Modifica')
 
 @section ('content')
-<section id="create-form">
+<section id="edit-form" class="my-5">
 
  <div class="container" >
-       <h2>Create Card:</h2>    
+       <h2>Modifica Card:</h2>    
 @include('includes.form.form')
 </div>
 </section>

@@ -27,8 +27,10 @@
     </div>
     <div class="button-container  d-flex justify-content-center align-items-center my-3">
         <a href="{{ route('cards.index')}}" class="btn btn-secondary">Torna indietro</a>
-        <a href="{{ route('cards.index')}}" class="btn btn-primary mx-2">Modifica</a>
-        <form action="">
+        <a href="{{ route('cards.edit', $card->id)}}" class="btn btn-primary mx-2">Modifica</a>
+        <form action="{{ route('cards.destroy',$card->id)}}" method="POST">
+            @method('DELETE')
+            @csrf
             <button type="submit" class="btn btn-danger">Elimina</button>
         </form>
     </div>
