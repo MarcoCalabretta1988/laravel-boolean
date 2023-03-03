@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::resource('cards', CardController::class);
-Route::get('/cards', [CardController::class, 'index'])->name('cards.index');
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::resource('cards', CardController::class);

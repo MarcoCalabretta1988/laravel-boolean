@@ -10,6 +10,7 @@
     @vite('resources/js/app.js')
 </head>
 <body>
+    @include('includes.header')
     @yield('content')
 
     @yield('script')
