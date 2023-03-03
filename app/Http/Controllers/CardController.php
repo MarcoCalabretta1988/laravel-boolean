@@ -30,6 +30,19 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required|string',
+            'mana' => 'required|numeric|min:0|max:99',
+            'thumb' => 'url|nullable',
+            'edition' => 'required|numeric|min:1|max:9',
+            'str' =>  'required|numeric|min:1|max:9',
+            'constitution' =>  'required|numeric|min:1|max:9',
+            'description' => 'string|nullable',
+            'type' => 'required|string',
+            'effect' => 'required|string',
+
+        ]);
         $data = $request->all();
         $data['effect'] = explode(',', $data['effect']);
         $card = new Card();
@@ -60,6 +73,19 @@ class CardController extends Controller
      */
     public function update(Request $request, Card $card)
     {
+
+        $request->validate([
+            'name' => 'required|string',
+            'mana' => 'required|numeric|min:0|max:99',
+            'thumb' => 'url|nullable',
+            'edition' => 'required|numeric|min:1|max:9',
+            'str' =>  'required|numeric|min:1|max:9',
+            'constitution' =>  'required|numeric|min:1|max:9',
+            'description' => 'string|nullable',
+            'type' => 'required|string',
+            'effect' => 'required|string',
+
+        ]);
         $data = $request->all();
         $data['effect'] = explode(',', $data['effect']);
         $card->fill($data);

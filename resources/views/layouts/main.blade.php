@@ -12,6 +12,10 @@
 </head>
 <body>
     @include('includes.header')
+    <div class="container">
+
+        @include('includes.alert')
+    </div>
     @yield('content')
 
     @yield('script')

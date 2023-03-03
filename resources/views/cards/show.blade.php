@@ -11,10 +11,10 @@
             @include('includes.card')
         </div>
         <div class="col-6 py-5">
-            <h3> {{$card->name}}</h3>
+            <h3> {{ucfirst($card->name)}}</h3>
             <p><strong>Mana: </strong> {{$card->mana}}</p>
             <p><strong>Edizione: </strong> {{$card->edition}}</p>
-            <h4>Effetti:</h4>
+            <p><strong>Effetti:</strong></p>
             <ul>
                 @foreach ($card->effect as $effect )
                  <li>{{$effect}}</li>

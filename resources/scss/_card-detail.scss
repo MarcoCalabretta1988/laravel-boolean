@@ -24,6 +24,74 @@
                 img {
                     height: 150px;
                 }
+
+                img {
+                    height: 242px;
+                    width: 328px;
+                    position: absolute;
+                    top: 47px;
+                    left: 15px;
+                }
+
+                .card-title {
+
+                    position: absolute;
+                    top: 13px;
+                    left: 20px;
+                    text-transform: capitalize;
+
+                }
+
+                .mana {
+                    position: absolute;
+                    top: 13px;
+                    right: 20px;
+                }
+
+                .description {
+
+                    overflow-y: hidden;
+                    height: 91px;
+                    width: 328px;
+                    padding: 23px;
+                    position: absolute;
+                    top: 388px;
+                    right: 8px;
+                    font-size: 14px;
+                }
+
+                .edition {
+                    position: absolute;
+                    top: 294px;
+                    right: 20px;
+
+                }
+
+                .type {
+                    position: absolute;
+                    top: 294px;
+                    left: 20px;
+                    text-transform: capitalize;
+                }
+
+                .effects {
+                    overflow-y: hidden;
+                    width: 328px;
+                    height: 98px;
+                    padding: 23px;
+                    position: absolute;
+                    top: 311px;
+                    right: 8px;
+                    font-size: 13px;
+                }
+
+                .str-const {
+                    position: absolute;
+                    bottom: 6px;
+                    right: 20px;
+                }
+
+
             }
         }
     }
