@@ -1,0 +1,42 @@
+#deck-jumbotron {
+    height: 400px;
+    background-image: url('../img/deckjumbo.jpg');
+    background-size: cover;
+    position: relative;
+
+    .deck-lable {
+        position: absolute;
+        bottom: 30px;
+        left: 150px;
+        color: white;
+        font-size: 50px;
+        padding: 10px 30px;
+        border: 2px solid #C93814;
+        border-radius: 20px;
+        background-color: #212529;
+
+    }
+}
+
+.row {
+
+    .col {
+
+        .card {
+            height: 520px;
+            width: 360px;
+            background-image: url('../img/card-background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .card-body {
+
+                overflow-y: auto;
+            }
+
+            img {
+                height: 150px;
+            }
+        }
+    }
+}

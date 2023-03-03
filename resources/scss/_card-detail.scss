@@ -1,0 +1,30 @@
+#card-detail {
+    min-height: calc(100vh - 132px);
+
+
+
+
+
+    .row {
+
+        .col-6 {
+
+            .card {
+                height: 520px;
+                width: 360px;
+                background-image: url('../img/card-background.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                .card-body {
+
+                    overflow-y: auto;
+                }
+
+                img {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}

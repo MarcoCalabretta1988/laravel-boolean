@@ -12,4 +12,5 @@ class Card extends Model
     use HasFactory;
     use SoftDeletes;
     protected $casts = ['effect' => 'array',];
+    protected $fillable = ['name', 'mana', 'thumb', 'edition', 'effect', 'description', 'str', 'constitution', 'type'];
 }

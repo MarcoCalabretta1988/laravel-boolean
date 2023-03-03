@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use Illuminate\Http\Request;
 
 class CardController extends Controller
@@ -11,7 +12,8 @@ class CardController extends Controller
      */
     public function index()
     {
-        return view('cards.index');
+        $cards = Card::all();
+        return view('cards.index', compact('cards'));
     }
 
     /**
@@ -19,7 +21,7 @@ class CardController extends Controller
      */
     public function create()
     {
-        //
+        return view('cards.create');
     }
 
     /**
@@ -27,15 +29,21 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['effect'] = explode(',', $data['effect']);
+        $card = new Card();
+        $card->fill($data);
+        $card->save();
+
+        return to_route('cards.show', $card->id);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Card $card)
     {
-        //
+        return view('cards.show', compact('card'));
     }
 
     /**

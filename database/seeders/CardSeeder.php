@@ -18,7 +18,7 @@ class CardSeeder extends Seeder
             $card = new Card();
             $card->name = $faker->words(2, true);
             $card->mana = $faker->randomNumber(2, false);
-            $card->thumb = $faker->imageUrl(640, 480, 'animals', true);
+            $card->thumb = 'https://picsum.photos/200/300';
             $card->edition = $faker->randomDigitNotNull();
             $card->effect = $faker->sentences(2);
             $card->description = $faker->paragraph();
